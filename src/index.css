@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap');
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --void:         #05070c;
+  --deep:         #121a2b;
+  --teal:         #5fd1c6;
+  --mist:         #8be3d8;
+  --violet:       #7c6cff;
+  --violet-soft:  #a78bfa;
+  --white:        #e8f4f2;
+  --dim:          rgba(139,227,216,0.45);
+  --violet-light: rgba(167,139,250,0.7);
+  --violet-mr: rgba(67, 52, 113, 0.7);
+  --teal-rgb:         95,209,198;
+  --mist-rgb:         139,227,216;
+  --violet-rgb:       124,108,255;
+  --violet-soft-rgb:  167,139,250;
+  --white-heading: rgba(232,244,242,0.25);
+  --gradient-heading: linear-gradient(135deg, #0f766e, #5b3cc4);
+  --font-display: 'Playfair Display', serif;
+  --font-mono:    'Space Mono', monospace;
+  --font-body:    'DM Sans', sans-serif;
+  --violet-dark: rgba(124,108,255,0.1);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gradient-text {
+  background: var(--gradient-heading);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+html { scroll-behavior: smooth; font-size: 16px; }
+
+body {
+  background: var(--void);
+  color: var(--white);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+  cursor: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: rgba(var(--teal-rgb), 0.25);
+  color: var(--mist);
+}
+
+::-webkit-scrollbar { width: 2px; }
+::-webkit-scrollbar-track { background: var(--void); }
+::-webkit-scrollbar-thumb { background: rgba(var(--teal-rgb), 0.3); border-radius: 2px; }
+
+a { text-decoration: none; color: inherit; }
+button { border: none; background: none; cursor: none; font-family: inherit; }
+
+.section {
+  padding: 8rem 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.section-label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  opacity: 0.8;
+}
+
+.section-label::before {
+  content: '';
+  display: block;
+  width: 24px;
+  height: 0.5px;
+  background: var(--teal);
+  flex-shrink: 0;
+}
+
+.divider {
+  width: 100%;
+  height: 0.5px;
+  background: linear-gradient(90deg, transparent, rgba(var(--teal-rgb), 0.2), transparent);
+  margin: 0;
+}
